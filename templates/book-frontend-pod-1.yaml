@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: book-frontend-pod-1
+  labels:
+     app: book-frontend
+spec:
+  nodeSelector:
+    kubernetes.io/hostname: k8s-node1
+  containers:
+  - name: container
+    image: dannielkil/book-frontend
+    ports:
+    - containerPort: 80
