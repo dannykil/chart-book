@@ -6,7 +6,7 @@ metadata:
      app: book-backend
 spec:
   nodeSelector:
-    kubernetes.io/hostname: k8s-node1
+    kubernetes.io/hostname: k8s-node2
   containers:
   - name: container
     image: dannielkil/book-backend
