@@ -1,14 +1,14 @@
-apiVersion: v1
-kind: Pod
-metadata:
-  name: book-backend-pod-1
-  labels:
-     app: book-backend
-spec:
-  nodeSelector:
-    kubernetes.io/hostname: k8s-node2
-  containers:
-  - name: container
-    image: dannielkil/book-backend
-    ports:
-    - containerPort: 8080
+# apiVersion: v1
+# kind: Pod
+# metadata:
+#   name: book-backend-pod-1
+#   labels:
+#      app: book-backend
+# spec:
+#   nodeSelector:
+#     kubernetes.io/hostname: k8s-node2
+#   containers:
+#   - name: container
+#     image: dannielkil/book-backend
+#     ports:
+#     - containerPort: 8080

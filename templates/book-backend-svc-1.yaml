@@ -4,7 +4,8 @@ metadata:
   name: book-backend-svc-1
 spec:
   selector:
-    app: book-backend
+    # app: book-backend
+    type: book-backend
   ports:
   - port: 8080
     targetPort: 8080
