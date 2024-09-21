@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
-  namespace: book-dev
+  namespace: {{ .Values.environment.env }}
   name: book-db-replicas
 spec:
   replicas: 1
@@ -15,7 +15,7 @@ spec:
       labels:
         # ver: book-db-1
         app: book-db-1
-      namespace: book-dev
+      namespace: {{ .Values.environment.env }}
     spec:
       nodeSelector:
         kubernetes.io/hostname: k8s-node2

@@ -10,5 +10,5 @@ spec:
   - port: 3307
     targetPort: 3306
     nodePort: 30002
-  type: NodePort
+  type: {{ .Values.service.type }}
   externalTrafficPolicy: Local

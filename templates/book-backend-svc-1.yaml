@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: book-backend-svc-1
-  namespace: book-dev
+  namespace: {{ .Values.environment.env }}
 spec:
   selector:
     # app: book-backend
@@ -12,5 +12,5 @@ spec:
   - port: 8080
     targetPort: 8080
     nodePort: 30003
-  type: NodePort
+  type: {{ .Values.service.type }}
   externalTrafficPolicy: Local
