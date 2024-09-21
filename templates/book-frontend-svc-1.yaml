@@ -7,8 +7,8 @@ spec:
   selector:
     app: book-frontend-1
   ports:
-  - port: {{ .Values.service.frontend.port }}
-    targetPort: {{ .Values.service.frontend.targetPort }}
-    nodePort: {{ .Values.service.frontend.nodePort }}
-  type: {{ .Values.service.frontend.type }}
+  - port: {{ .Values.service.port }}
+    targetPort: 80
+    nodePort: 30002
+  type: {{ .Values.service.type }}
   externalTrafficPolicy: Local
