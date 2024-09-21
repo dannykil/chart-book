@@ -20,6 +20,6 @@ spec:
       containers:
       - name: container
         image: dannielkil/book-backend
-        ports:
-        - containerPort: 8080
+        # ports:
+        # - containerPort: 8080
       terminationGracePeriodSeconds: 0

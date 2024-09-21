@@ -20,6 +20,6 @@ spec:
       containers:
       - name: container
         image: dannielkil/book-db
-        ports:
-        - containerPort: 3306
+        # ports:
+        # - containerPort: 3306
       terminationGracePeriodSeconds: 0
