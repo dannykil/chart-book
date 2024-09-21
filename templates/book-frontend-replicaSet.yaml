@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  namespace: book-dev
+  name: book-frontend-replicaSet
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      ver: book-frontend
+  template:
+    metadata:
+      name: book-frontend
+      labels:
+        ver: book-frontend
+      namespace: book-dev
+    spec:
+      nodeSelector:
+        kubernetes.io/hostname: k8s-node2
+      containers:
+      - name: container
+        image: dannielkil/book-frontend
+        ports:
+        - containerPort: 80
+      terminationGracePeriodSeconds: 0
