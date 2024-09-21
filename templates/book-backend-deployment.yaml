@@ -1,23 +1,23 @@
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: book-backend-deployment
-spec:
-  selector:
-    matchLabels:
-      type: book-backend
-  replicas: 2
-  strategy:
-    type: RollingUpdate
-  minReadySeconds: 10
-  template:
-    metadata:
-      labels:
-        type: book-backend
-    spec:
-      nodeSelector:
-        kubernetes.io/hostname: k8s-node2
-      containers:
-      - name: container
-        image: dannielkil/book-backend
-      terminationGracePeriodSeconds: 0
+# apiVersion: apps/v1
+# kind: Deployment
+# metadata:
+#   name: book-backend-deployment
+# spec:
+#   selector:
+#     matchLabels:
+#       type: book-backend
+#   replicas: 2
+#   strategy:
+#     type: RollingUpdate
+#   minReadySeconds: 10
+#   template:
+#     metadata:
+#       labels:
+#         type: book-backend
+#     spec:
+#       nodeSelector:
+#         kubernetes.io/hostname: k8s-node2
+#       containers:
+#       - name: container
+#         image: dannielkil/book-backend
+#       terminationGracePeriodSeconds: 0

@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  namespace: book-dev
+  name: book-db-replicaSet
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      ver: book-db
+  template:
+    metadata:
+      name: book-db
+      labels:
+        ver: book-db
+      namespace: book-dev
+    spec:
+      nodeSelector:
+        kubernetes.io/hostname: k8s-node2
+      containers:
+      - name: container
+        image: dannielkil/book-db
+        ports:
+        - containerPort: 3306
+      terminationGracePeriodSeconds: 0

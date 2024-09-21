@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  namespace: book-dev
+  name: book-backend-replicaSet
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      ver: book-backend
+  template:
+    metadata:
+      name: book-backend
+      labels:
+        ver: book-backend
+      namespace: book-dev
+    spec:
+      nodeSelector:
+        kubernetes.io/hostname: k8s-node2
+      containers:
+      - name: container
+        image: dannielkil/book-backend
+        ports:
+        - containerPort: 8080
+      terminationGracePeriodSeconds: 0
