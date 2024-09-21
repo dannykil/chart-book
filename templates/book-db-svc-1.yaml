@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: book-db-svc-1
-  namespace: book-dev
+  namespace: {{ .Values.environment.env }}
 spec:
   selector:
     app: book-db-1
