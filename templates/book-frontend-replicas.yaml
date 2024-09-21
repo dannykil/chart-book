@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
   namespace: book-dev
-  name: book-frontend-replicaSet
+  name: book-frontend-replicas
 spec:
   replicas: 1
   selector:
