@@ -4,7 +4,7 @@ metadata:
   namespace: {{ .Values.environment.env }}
   name: book-backend-replicas
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       ver: book-backend-1
