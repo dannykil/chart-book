@@ -7,12 +7,12 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      ver: book-frontend
+      ver: book-frontend-1
   template:
     metadata:
-      name: book-frontend
+      name: book-frontend-1
       labels:
-        ver: book-frontend
+        ver: book-frontend-1
       namespace: book-dev
     spec:
       nodeSelector:
