@@ -5,7 +5,7 @@ metadata:
   namespace: book-dev
 spec:
   selector:
-    app: book-db
+    app: book-db-1
   ports:
   - port: 3307
     targetPort: 3306

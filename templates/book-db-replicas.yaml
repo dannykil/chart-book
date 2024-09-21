@@ -7,12 +7,14 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      ver: book-db-1
+      # ver: book-db-1
+      app: book-db-1
   template:
     metadata:
       name: book-db-1
       labels:
-        ver: book-db-1
+        # ver: book-db-1
+        app: book-db-1
       namespace: book-dev
     spec:
       nodeSelector:
