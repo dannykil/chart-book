@@ -22,4 +22,13 @@ spec:
         image: dannielkil/book-backend
         # ports:
         # - containerPort: 8080
+        livenessProbe:
+          httpGet:                # HttpGet 메소드로 점검
+            path: /api/health     # 체크할 경로
+            port: 8080            # 체크할 Port
+          initialDelaySeconds: 5  # 최초 5초 후에 LivenessProbe 체크를 시작함
+          periodSeconds: 10       # 10초마다 LivenessProbe 체크
+          timeoutSeconds: 1       # 
+          successThreshold: 1     # 1번만 성공해도 파드가 정상적으로 실행됐다고 판단
+          failureThreshold: 3     # 3번 실패 시 Pod Restart
       terminationGracePeriodSeconds: 0
