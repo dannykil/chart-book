@@ -1,14 +1,14 @@
-apiVersion: v1
-kind: Pod
-metadata:
-  name: book-db-pod-1
-  labels:
-     app: book-db-1
-spec:
-  nodeSelector:
-    kubernetes.io/hostname: k8s-node1
-  containers:
-  - name: container
-    image: dannielkil/book-db
-    ports:
-    - containerPort: 3306
+# apiVersion: v1
+# kind: Pod
+# metadata:
+#   name: book-db-pod-1
+#   labels:
+#      app: book-db-1
+# spec:
+#   nodeSelector:
+#     kubernetes.io/hostname: k8s-node1
+#   containers:
+#   - name: container
+#     image: dannielkil/book-db
+#     ports:
+#     - containerPort: 3306
